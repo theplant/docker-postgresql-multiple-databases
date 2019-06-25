@@ -15,14 +15,6 @@ mechanism.
 
 ## Usage
 
-### By building a custom image
-
-Clone the repository, build and push the image to your Docker repository,
-for example for Google Private Repository do the following:
-
-    docker build --tag=theplant/postgresmd:9.
-    gcloud docker -- push theplant/postgresmd:9
-
 You still need to pass the `POSTGRES_MULTIPLE_DATABASES` environment variable
 to the container:
 

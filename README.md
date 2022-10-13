@@ -19,11 +19,23 @@ You still need to pass the `POSTGRES_MULTIPLE_DATABASES` environment variable
 to the container:
 
     myapp-postgresql:
-        image: theplant/postgresmd:9
+        image: public.ecr.aws/theplant/postgresmd:9
         environment:
             - POSTGRES_MULTIPLE_DATABASES=db1,db2
             - POSTGRES_USER=myapp
             - POSTGRES_PASSWORD=
+
+## Push image
+
+Please assume AWS IAM `developer` role before push image
+```
+[alias.main-developer]
+arn = "arn:aws:iam::562055475000:role/developer"
+```
+
+```
+aws ecr-public get-login-password --region us-east-1 | docker login --username AWS --password-stdin public.ecr.aws/theplant
+```
 
 ### Non-standard database names
 

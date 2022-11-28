@@ -19,7 +19,7 @@ You still need to pass the `POSTGRES_MULTIPLE_DATABASES` environment variable
 to the container:
 
     myapp-postgresql:
-        image: public.ecr.aws/theplant/postgresmd:9
+        image: public.ecr.aws/theplant/postgresmd:13
         environment:
             - POSTGRES_MULTIPLE_DATABASES=db1,db2
             - POSTGRES_USER=myapp
